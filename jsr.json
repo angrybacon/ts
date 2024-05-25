@@ -1,0 +1,8 @@
+{
+  "exports": {
+    "./tsconfig/dom": "./tsconfig.dom.json",
+    "./tsconfig/nodom": "./tsconfig.nodom.json"
+  },
+  "name": "@korumite/ts",
+  "version": "0.1.0"
+}
