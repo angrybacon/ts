@@ -11,8 +11,16 @@ jobs:
     name: Publish
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      id-token: write
+      contents: write          # Allow publishing a GitHub release
+      id-token: write          # Allow OIDC for npm provenance
+      issues: write            # Allow commenting on released issues
+      pull-requests: write     # Allow commenting on released pull requests
     steps:
       - uses: actions/checkout@v4
-      - run: npx jsr publish
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

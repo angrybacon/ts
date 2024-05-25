@@ -4,5 +4,8 @@
     "./tsconfig/nodom": "./tsconfig.nodom.json"
   },
   "name": "@korumite/ts",
-  "version": "0.1.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angrybacon/kiwi.git"
+  }
 }
