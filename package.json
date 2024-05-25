@@ -6,6 +6,6 @@
   "name": "@korumite/ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angrybacon/kiwi.git"
+    "url": "https://github.com/angrybacon/ts.git"
   }
 }
